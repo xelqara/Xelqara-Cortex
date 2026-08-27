@@ -13,6 +13,9 @@ license = {file = "LICENSE"}
 classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
 dependencies = []
 
+[project.optional-dependencies]
+spreadsheets = ["openpyxl>=3.1"]
+
 [project.scripts]
 cortex = "xelqara_cortex.cli:main"
 bidcore = "xelqara_cortex.bid_cli:main"

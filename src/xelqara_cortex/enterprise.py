@@ -165,6 +165,18 @@ class EnterpriseStore:
             rows = self.db.execute("SELECT actor,action,target,detail,created_at FROM audit ORDER BY created_at DESC LIMIT ?", (max(1, min(limit, 500)),)).fetchall()
         return [{"actor": r[0], "action": r[1], "target": r[2], "detail": json.loads(r[3]), "created_at": r[4]} for r in rows]
 
+    def export_json(self, project_id: str, path: str | Path) -> None:
+        output = Path(path)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "project_id": project_id,
+            "exported_at": self._now(),
+            "review_items": [asdict(item) for item in self.list_reviews(project_id)],
+            "audit": self.audit_log(project_id),
+            "policy": "Drafts require human approval before submission.",
+        }
+        output.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
     def export_csv(self, project_id: str, path: str | Path) -> None:
         output = Path(path)
         output.parent.mkdir(parents=True, exist_ok=True)

@@ -84,6 +84,18 @@ bidcore-enterprise --root .cortex draft <project-id> questions.json --by owner
 bidcore-enterprise --root .cortex export <project-id> reviewed_answers.csv
 ```
 
+## Document formats and evidence governance
+
+BidCore now imports plain text, Markdown, CSV/TSV, XLSX, DOCX, and text-based PDF files locally. XLSX imports retain workbook sheet and row locations; CSV imports retain row numbers; DOCX imports retain paragraph numbers; PDF imports retain page numbers. Macros, embedded scripts, and external links are not executed. PDF support uses the local `pdftotext` utility, and XLSX support uses the optional `openpyxl` package.
+
+The `EvidenceRegistry` tracks source owner, classification, approval state, review date, expiry date, and checksum. This creates a freshness and accountability layer around the answer library. A source can be marked expired rather than silently reused.
+
+```bash
+cortex --root .cortex ingest customer_questionnaire.xlsx --name customer_questionnaire.xlsx
+```
+
+The resulting evidence records expose locations such as `sheet:Questionnaire/row:12`, `paragraph:8`, or `page:4`, allowing reviewers to return to the original file.
+
 ## RFP benchmark and prompt pack
 
 The repository includes an original, synthetic benchmark of 100 RFP and security-questionnaire prompts across ten operational domains. It is explicitly marked synthetic and is not customer data. Run it with:
@@ -95,6 +107,15 @@ PYTHONPATH=src python tools/run_benchmark.py
 The report is written to `reports/rfp_100_eval.json`. The current benchmark measures deterministic retrieval and gap behavior; it does not claim that a generative model is accurate or that the product is number one. The repository also includes `prompts/bidcore_prompt_pack.md`, which enforces evidence-only drafting, source citations, conservative security language, spreadsheet preservation, and mandatory human approval.
 
 Public third-party templates are recorded under `third_party/README.md`, but their files are not redistributed. Official or customer-owned questionnaires must be supplied with appropriate permission and kept outside the public repository.
+
+## Local deployment packaging
+
+A minimal `Dockerfile` is included for customer-controlled deployment. It does not expose a public port, does not contain a model, and does not require an API key. Mount a customer-controlled `.cortex` directory when running the image and keep the container on the internal network. The deployment must still be configured with the customer's own access controls, backup policy, and review process.
+
+```bash
+docker build -t xelqara-bidcore:local .
+docker run --rm -v "$PWD/.cortex:/app/.cortex" xelqara-bidcore:local --help
+```
 
 ## Product direction
 

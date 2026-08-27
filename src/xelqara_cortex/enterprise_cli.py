@@ -7,6 +7,7 @@ from pathlib import Path
 
 from .bidcore import BidCore
 from .core import Cortex
+from .document_io import DocumentImporter
 from .enterprise import EnterpriseStore
 
 
@@ -54,15 +55,24 @@ def main(argv: list[str] | None = None) -> int:
             count = cortex.ingest_file(args.document, args.name, replace=True)
             print(json.dumps({"status": "ok", "chunks": count}, ensure_ascii=False))
         elif args.command == "draft":
-            rows = json.loads(Path(args.questions).read_text(encoding="utf-8"))
-            drafts = BidCore(cortex).draft_batch(BidCore.parse_questions(rows), args.limit)
+            question_path = Path(args.questions)
+            if question_path.suffix.lower() == ".json":
+                rows = json.loads(question_path.read_text(encoding="utf-8"))
+                questions = BidCore.parse_questions(rows)
+            else:
+                chunks = DocumentImporter().import_file(question_path)
+                questions = BidCore.parse_document_chunks(chunks)
+            drafts = BidCore(cortex).draft_batch(questions, args.limit)
             count = store.add_reviews(args.project_id, drafts, args.by)
             print(json.dumps({"status": "ok", "review_items": count}, ensure_ascii=False))
         elif args.command == "review":
             store.transition(args.item_id, args.state, args.by, args.note)
             print(json.dumps({"status": "ok", "item_id": args.item_id, "state": args.state}, ensure_ascii=False))
         elif args.command == "export":
-            store.export_csv(args.project_id, args.output)
+            if Path(args.output).suffix.lower() == ".json":
+                store.export_json(args.project_id, args.output)
+            else:
+                store.export_csv(args.project_id, args.output)
             print(json.dumps({"status": "ok", "output": str(Path(args.output).resolve())}, ensure_ascii=False))
         elif args.command == "audit":
             print(json.dumps(store.audit_log(args.target), ensure_ascii=False, indent=2))

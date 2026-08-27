@@ -47,6 +47,26 @@ class BidCore:
         return "general"
 
     @classmethod
+    def parse_document_chunks(cls, chunks: Iterable[object]) -> list[BidQuestion]:
+        questions: list[BidQuestion] = []
+        for index, chunk in enumerate(chunks, 1):
+            text = str(getattr(chunk, "text", "")).strip()
+            if not text:
+                continue
+            cells = [part.strip() for part in text.split("|") if part.strip()]
+            header_text = " ".join(cells).casefold()
+            if "question" in header_text and ("owner" in header_text or "response" in header_text or "question id" in header_text):
+                continue
+            candidates = [cell for cell in cells if "?" in cell or len(cell.split()) >= 5]
+            candidate = max(candidates, key=len) if candidates else text
+            if candidate.casefold() in {"question", "question text", "questionnaire"}:
+                continue
+            metadata = getattr(chunk, "metadata", {}) or {}
+            row_id = cells[0] if cells and len(cells[0]) <= 40 and any(ch.isdigit() for ch in cells[0]) else f"Q{index:04d}"
+            questions.append(BidQuestion(row_id, candidate, cls.classify(candidate)))
+        return questions
+
+    @classmethod
     def parse_questions(cls, rows: Iterable[str]) -> list[BidQuestion]:
         questions: list[BidQuestion] = []
         for index, row in enumerate(rows, 1):
