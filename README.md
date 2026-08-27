@@ -84,6 +84,18 @@ bidcore-enterprise --root .cortex draft <project-id> questions.json --by owner
 bidcore-enterprise --root .cortex export <project-id> reviewed_answers.csv
 ```
 
+## RFP benchmark and prompt pack
+
+The repository includes an original, synthetic benchmark of 100 RFP and security-questionnaire prompts across ten operational domains. It is explicitly marked synthetic and is not customer data. Run it with:
+
+```bash
+PYTHONPATH=src python tools/run_benchmark.py
+```
+
+The report is written to `reports/rfp_100_eval.json`. The current benchmark measures deterministic retrieval and gap behavior; it does not claim that a generative model is accurate or that the product is number one. The repository also includes `prompts/bidcore_prompt_pack.md`, which enforces evidence-only drafting, source citations, conservative security language, spreadsheet preservation, and mandatory human approval.
+
+Public third-party templates are recorded under `third_party/README.md`, but their files are not redistributed. Official or customer-owned questionnaires must be supplied with appropriate permission and kept outside the public repository.
+
 ## Product direction
 
 The long-term product is **Cortex Private Intelligence Gateway**: an installable private cognitive layer for organizations that need memory, context, evidence, multilingual workflows, access controls, and auditable model behavior. Xelqara will differentiate through Arabic/English context engineering, local-first deployment, provenance, and verification rather than competing on parameter count.

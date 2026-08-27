@@ -1,0 +1,702 @@
+[
+  {
+    "id": "SYN-001",
+    "category": "governance",
+    "question": "Describe the ownership and executive oversight of your information security program.",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-002",
+    "category": "governance",
+    "question": "How often are enterprise security risks assessed and tracked to closure?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-003",
+    "category": "governance",
+    "question": "Who approves material changes to security policies and standards?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-004",
+    "category": "governance",
+    "question": "How are security responsibilities communicated to employees and contractors?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-005",
+    "category": "governance",
+    "question": "Do you maintain a documented security program scope for the service in question?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-006",
+    "category": "governance",
+    "question": "How are control exceptions recorded, approved, and reviewed?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-007",
+    "category": "governance",
+    "question": "What process governs changes to your security organization and key roles?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-008",
+    "category": "governance",
+    "question": "How do you report significant security metrics to executive leadership?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-009",
+    "category": "governance",
+    "question": "How are security policies reviewed, versioned, and approved?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-010",
+    "category": "governance",
+    "question": "What is the escalation path for unresolved security risks?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-011",
+    "category": "access",
+    "question": "Is multi-factor authentication required for privileged administrative access?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-012",
+    "category": "access",
+    "question": "How are user accounts provisioned and removed when employment changes?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-013",
+    "category": "access",
+    "question": "Do you use role-based access control for production systems?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-014",
+    "category": "access",
+    "question": "How often are privileged access rights reviewed by an accountable owner?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-015",
+    "category": "access",
+    "question": "How are service accounts protected and monitored?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-016",
+    "category": "access",
+    "question": "Do you enforce single sign-on for enterprise customers?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-017",
+    "category": "access",
+    "question": "How do you restrict access to production data for support personnel?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-018",
+    "category": "access",
+    "question": "What controls prevent shared administrator credentials?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-019",
+    "category": "access",
+    "question": "How are authentication events logged and investigated?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-020",
+    "category": "access",
+    "question": "What is the process for emergency access to production systems?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-021",
+    "category": "data_protection",
+    "question": "How is customer data encrypted while transmitted over public networks?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-022",
+    "category": "data_protection",
+    "question": "How is customer data encrypted while stored?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-023",
+    "category": "data_protection",
+    "question": "What categories of customer data does the service process?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-024",
+    "category": "data_protection",
+    "question": "Where is customer data hosted and how is location controlled?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-025",
+    "category": "data_protection",
+    "question": "How are encryption keys generated, stored, rotated, and revoked?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-026",
+    "category": "data_protection",
+    "question": "What controls prevent unauthorized copying of customer data?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-027",
+    "category": "data_protection",
+    "question": "How do you separate customer data between tenants?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-028",
+    "category": "data_protection",
+    "question": "What retention periods apply to customer data and backups?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-029",
+    "category": "data_protection",
+    "question": "How do you process verified deletion requests?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-030",
+    "category": "data_protection",
+    "question": "How are removable media and exported datasets controlled?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-031",
+    "category": "privacy",
+    "question": "Do you maintain a documented privacy program for the service?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-032",
+    "category": "privacy",
+    "question": "How do you support data subject access and deletion requests?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-033",
+    "category": "privacy",
+    "question": "Which subprocessors may process personal data for the service?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-034",
+    "category": "privacy",
+    "question": "How do you assess privacy risks before launching a new feature?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-035",
+    "category": "privacy",
+    "question": "What contractual privacy terms are available to enterprise customers?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-036",
+    "category": "privacy",
+    "question": "How do you handle cross-border transfers of personal data?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-037",
+    "category": "privacy",
+    "question": "How are privacy incidents escalated and documented?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-038",
+    "category": "privacy",
+    "question": "How do you distinguish customer instructions from your own processing purposes?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-039",
+    "category": "privacy",
+    "question": "What controls govern employee access to personal data?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-040",
+    "category": "privacy",
+    "question": "How do you verify deletion from active systems and backups?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-041",
+    "category": "incident",
+    "question": "Do you maintain a documented incident response plan?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-042",
+    "category": "incident",
+    "question": "How are security events detected, triaged, and escalated?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-043",
+    "category": "incident",
+    "question": "What is your customer notification process for a material incident?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-044",
+    "category": "incident",
+    "question": "How often is the incident response plan tested?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-045",
+    "category": "incident",
+    "question": "How do you preserve evidence during a security investigation?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-046",
+    "category": "incident",
+    "question": "Who has authority to declare and close a security incident?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-047",
+    "category": "incident",
+    "question": "How are lessons learned tracked after an incident?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-048",
+    "category": "incident",
+    "question": "How do you coordinate incident communications with customers?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-049",
+    "category": "incident",
+    "question": "What severity levels and response targets do you use?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-050",
+    "category": "incident",
+    "question": "How are incidents involving subprocessors handled?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-051",
+    "category": "continuity",
+    "question": "Do you maintain a business continuity plan for critical service operations?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-052",
+    "category": "continuity",
+    "question": "What recovery time objective applies to the service?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-053",
+    "category": "continuity",
+    "question": "What recovery point objective applies to customer data?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-054",
+    "category": "continuity",
+    "question": "How frequently are backups performed and tested?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-055",
+    "category": "continuity",
+    "question": "How often are disaster recovery procedures exercised?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-056",
+    "category": "continuity",
+    "question": "How do you maintain service availability during a regional outage?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-057",
+    "category": "continuity",
+    "question": "What dependencies are included in continuity planning?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-058",
+    "category": "continuity",
+    "question": "How are continuity test findings remediated?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-059",
+    "category": "continuity",
+    "question": "How do customers receive service availability and outage information?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-060",
+    "category": "continuity",
+    "question": "Who approves the continuity plan and its review cadence?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-061",
+    "category": "secure_development",
+    "question": "Do you maintain a documented secure software development lifecycle?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-062",
+    "category": "secure_development",
+    "question": "How are code changes reviewed before production deployment?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-063",
+    "category": "secure_development",
+    "question": "How do you scan dependencies for known vulnerabilities?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-064",
+    "category": "secure_development",
+    "question": "How are secrets prevented from entering source code repositories?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-065",
+    "category": "secure_development",
+    "question": "How do you prioritize and remediate application vulnerabilities?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-066",
+    "category": "secure_development",
+    "question": "Are security tests included in your build and release pipeline?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-067",
+    "category": "secure_development",
+    "question": "How do you control production releases and emergency changes?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-068",
+    "category": "secure_development",
+    "question": "How are developers trained on secure coding practices?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-069",
+    "category": "secure_development",
+    "question": "How do you assess the security of open-source components?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-070",
+    "category": "secure_development",
+    "question": "How are vulnerability exceptions approved and tracked?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-071",
+    "category": "third_party",
+    "question": "How do you assess the security of critical suppliers and subprocessors?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-072",
+    "category": "third_party",
+    "question": "Do contracts with critical suppliers include security requirements?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-073",
+    "category": "third_party",
+    "question": "How often are critical suppliers reassessed?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-074",
+    "category": "third_party",
+    "question": "How do you monitor supplier security incidents?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-075",
+    "category": "third_party",
+    "question": "How are supplier access rights removed at contract termination?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-076",
+    "category": "third_party",
+    "question": "Do you maintain an inventory of suppliers that process customer data?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-077",
+    "category": "third_party",
+    "question": "How are supplier control gaps documented and remediated?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-078",
+    "category": "third_party",
+    "question": "What due diligence is required before approving a new subprocessor?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-079",
+    "category": "third_party",
+    "question": "How do you notify customers about material subprocessor changes?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-080",
+    "category": "third_party",
+    "question": "How are supplier continuity risks included in business impact analysis?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-081",
+    "category": "implementation",
+    "question": "What deployment models are available for enterprise customers?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-082",
+    "category": "implementation",
+    "question": "What integrations are supported for identity and access management?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-083",
+    "category": "implementation",
+    "question": "What implementation activities are performed by your team?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-084",
+    "category": "implementation",
+    "question": "What support channels and service targets are available?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-085",
+    "category": "implementation",
+    "question": "How are customer configuration changes tested and approved?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-086",
+    "category": "implementation",
+    "question": "What information is required to estimate an implementation timeline?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-087",
+    "category": "implementation",
+    "question": "How do you migrate customer data into the service?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-088",
+    "category": "implementation",
+    "question": "How are implementation risks and dependencies tracked?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-089",
+    "category": "implementation",
+    "question": "What documentation and training are provided to administrators?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-090",
+    "category": "implementation",
+    "question": "How is customer access removed when a contract ends?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-091",
+    "category": "evidence",
+    "question": "Which current reports or certifications can support your security claims?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-092",
+    "category": "evidence",
+    "question": "Can you provide the scope and period of your latest independent assessment?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-093",
+    "category": "evidence",
+    "question": "Which evidence supports your encryption and key-management statements?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-094",
+    "category": "evidence",
+    "question": "Which evidence supports your incident response and notification commitments?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-095",
+    "category": "evidence",
+    "question": "Which evidence supports your recovery objectives and backup testing?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-096",
+    "category": "evidence",
+    "question": "Which evidence supports your access review and authentication controls?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-097",
+    "category": "evidence",
+    "question": "Which evidence supports your privacy and data-retention statements?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-098",
+    "category": "evidence",
+    "question": "Which evidence supports your supplier risk-management process?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-099",
+    "category": "evidence",
+    "question": "How do you control the freshness and approval status of customer-facing evidence?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  },
+  {
+    "id": "SYN-100",
+    "category": "evidence",
+    "question": "Who approves evidence before it is shared with a prospective customer?",
+    "source_type": "xelqara_synthetic",
+    "licensed": true
+  }
+]

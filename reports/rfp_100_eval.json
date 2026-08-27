@@ -1,0 +1,1024 @@
+{
+  "trials": 100,
+  "synthetic_only": true,
+  "supported_cases": 70,
+  "gap_cases": 30,
+  "supported_exact_source_rate": 1.0,
+  "gap_false_support_rate": 0.0,
+  "retrieval_rate_all": 1.0,
+  "category_counts": {
+    "governance": 10,
+    "access": 10,
+    "data_protection": 10,
+    "privacy": 10,
+    "incident": 10,
+    "continuity": 10,
+    "secure_development": 10,
+    "third_party": 10,
+    "implementation": 10,
+    "evidence": 10
+  },
+  "results": [
+    {
+      "trial": 1,
+      "id": "SYN-001",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 2,
+      "id": "SYN-002",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.911738,
+      "predicted_supported": true
+    },
+    {
+      "trial": 3,
+      "id": "SYN-003",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.631025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 4,
+      "id": "SYN-004",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.631025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 5,
+      "id": "SYN-005",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.818854,
+      "predicted_supported": true
+    },
+    {
+      "trial": 6,
+      "id": "SYN-006",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.809993,
+      "predicted_supported": true
+    },
+    {
+      "trial": 7,
+      "id": "SYN-007",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.931139,
+      "predicted_supported": true
+    },
+    {
+      "trial": 8,
+      "id": "SYN-008",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.911738,
+      "predicted_supported": true
+    },
+    {
+      "trial": 9,
+      "id": "SYN-009",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.647771,
+      "predicted_supported": true
+    },
+    {
+      "trial": 10,
+      "id": "SYN-010",
+      "category": "governance",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.972214,
+      "predicted_supported": true
+    },
+    {
+      "trial": 11,
+      "id": "SYN-011",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.40548,
+      "predicted_supported": true
+    },
+    {
+      "trial": 12,
+      "id": "SYN-012",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.631025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 13,
+      "id": "SYN-013",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.692606,
+      "predicted_supported": true
+    },
+    {
+      "trial": 14,
+      "id": "SYN-014",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.20164,
+      "predicted_supported": true
+    },
+    {
+      "trial": 15,
+      "id": "SYN-015",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.500793,
+      "predicted_supported": true
+    },
+    {
+      "trial": 16,
+      "id": "SYN-016",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.089253,
+      "predicted_supported": true
+    },
+    {
+      "trial": 17,
+      "id": "SYN-017",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.510247,
+      "predicted_supported": true
+    },
+    {
+      "trial": 18,
+      "id": "SYN-018",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.183333,
+      "predicted_supported": true
+    },
+    {
+      "trial": 19,
+      "id": "SYN-019",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.336394,
+      "predicted_supported": true
+    },
+    {
+      "trial": 20,
+      "id": "SYN-020",
+      "category": "access",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.271538,
+      "predicted_supported": true
+    },
+    {
+      "trial": 21,
+      "id": "SYN-021",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.355944,
+      "predicted_supported": true
+    },
+    {
+      "trial": 22,
+      "id": "SYN-022",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.951282,
+      "predicted_supported": true
+    },
+    {
+      "trial": 23,
+      "id": "SYN-023",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.951282,
+      "predicted_supported": true
+    },
+    {
+      "trial": 24,
+      "id": "SYN-024",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.089253,
+      "predicted_supported": true
+    },
+    {
+      "trial": 25,
+      "id": "SYN-025",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.614911,
+      "predicted_supported": true
+    },
+    {
+      "trial": 26,
+      "id": "SYN-026",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 27,
+      "id": "SYN-027",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.931139,
+      "predicted_supported": true
+    },
+    {
+      "trial": 28,
+      "id": "SYN-028",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 29,
+      "id": "SYN-029",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.470897,
+      "predicted_supported": true
+    },
+    {
+      "trial": 30,
+      "id": "SYN-030",
+      "category": "data_protection",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.470897,
+      "predicted_supported": true
+    },
+    {
+      "trial": 31,
+      "id": "SYN-031",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.431666,
+      "predicted_supported": true
+    },
+    {
+      "trial": 32,
+      "id": "SYN-032",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 33,
+      "id": "SYN-033",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.11141,
+      "predicted_supported": true
+    },
+    {
+      "trial": 34,
+      "id": "SYN-034",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.224085,
+      "predicted_supported": true
+    },
+    {
+      "trial": 35,
+      "id": "SYN-035",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 36,
+      "id": "SYN-036",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.911738,
+      "predicted_supported": true
+    },
+    {
+      "trial": 37,
+      "id": "SYN-037",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.665192,
+      "predicted_supported": true
+    },
+    {
+      "trial": 38,
+      "id": "SYN-038",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.067911,
+      "predicted_supported": true
+    },
+    {
+      "trial": 39,
+      "id": "SYN-039",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.48555,
+      "predicted_supported": true
+    },
+    {
+      "trial": 40,
+      "id": "SYN-040",
+      "category": "privacy",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.631025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 41,
+      "id": "SYN-041",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.809993,
+      "predicted_supported": true
+    },
+    {
+      "trial": 42,
+      "id": "SYN-042",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.48555,
+      "predicted_supported": true
+    },
+    {
+      "trial": 43,
+      "id": "SYN-043",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.431666,
+      "predicted_supported": true
+    },
+    {
+      "trial": 44,
+      "id": "SYN-044",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.809993,
+      "predicted_supported": true
+    },
+    {
+      "trial": 45,
+      "id": "SYN-045",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 46,
+      "id": "SYN-046",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 47,
+      "id": "SYN-047",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 48,
+      "id": "SYN-048",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.647771,
+      "predicted_supported": true
+    },
+    {
+      "trial": 49,
+      "id": "SYN-049",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.647771,
+      "predicted_supported": true
+    },
+    {
+      "trial": 50,
+      "id": "SYN-050",
+      "category": "incident",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.336394,
+      "predicted_supported": true
+    },
+    {
+      "trial": 51,
+      "id": "SYN-051",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.536433,
+      "predicted_supported": true
+    },
+    {
+      "trial": 52,
+      "id": "SYN-052",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.500793,
+      "predicted_supported": true
+    },
+    {
+      "trial": 53,
+      "id": "SYN-053",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.647771,
+      "predicted_supported": true
+    },
+    {
+      "trial": 54,
+      "id": "SYN-054",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.336394,
+      "predicted_supported": true
+    },
+    {
+      "trial": 55,
+      "id": "SYN-055",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.48555,
+      "predicted_supported": true
+    },
+    {
+      "trial": 56,
+      "id": "SYN-056",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.931139,
+      "predicted_supported": true
+    },
+    {
+      "trial": 57,
+      "id": "SYN-057",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.500793,
+      "predicted_supported": true
+    },
+    {
+      "trial": 58,
+      "id": "SYN-058",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.500793,
+      "predicted_supported": true
+    },
+    {
+      "trial": 59,
+      "id": "SYN-059",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.791153,
+      "predicted_supported": true
+    },
+    {
+      "trial": 60,
+      "id": "SYN-060",
+      "category": "continuity",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.647771,
+      "predicted_supported": true
+    },
+    {
+      "trial": 61,
+      "id": "SYN-061",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 3.089253,
+      "predicted_supported": true
+    },
+    {
+      "trial": 62,
+      "id": "SYN-062",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 63,
+      "id": "SYN-063",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.931139,
+      "predicted_supported": true
+    },
+    {
+      "trial": 64,
+      "id": "SYN-064",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 65,
+      "id": "SYN-065",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.470897,
+      "predicted_supported": true
+    },
+    {
+      "trial": 66,
+      "id": "SYN-066",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.755564,
+      "predicted_supported": true
+    },
+    {
+      "trial": 67,
+      "id": "SYN-067",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 68,
+      "id": "SYN-068",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.773025,
+      "predicted_supported": true
+    },
+    {
+      "trial": 69,
+      "id": "SYN-069",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.911738,
+      "predicted_supported": true
+    },
+    {
+      "trial": 70,
+      "id": "SYN-070",
+      "category": "secure_development",
+      "expected_supported": true,
+      "retrieved": true,
+      "exact_source_match": true,
+      "top_score": 2.48555,
+      "predicted_supported": true
+    },
+    {
+      "trial": 71,
+      "id": "SYN-071",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.603709,
+      "predicted_supported": false
+    },
+    {
+      "trial": 72,
+      "id": "SYN-072",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.605971,
+      "predicted_supported": false
+    },
+    {
+      "trial": 73,
+      "id": "SYN-073",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.986664,
+      "predicted_supported": false
+    },
+    {
+      "trial": 74,
+      "id": "SYN-074",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.211941,
+      "predicted_supported": false
+    },
+    {
+      "trial": 75,
+      "id": "SYN-075",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.215961,
+      "predicted_supported": false
+    },
+    {
+      "trial": 76,
+      "id": "SYN-076",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.360769,
+      "predicted_supported": false
+    },
+    {
+      "trial": 77,
+      "id": "SYN-077",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.536281,
+      "predicted_supported": false
+    },
+    {
+      "trial": 78,
+      "id": "SYN-078",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.007456,
+      "predicted_supported": false
+    },
+    {
+      "trial": 79,
+      "id": "SYN-079",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.09333,
+      "predicted_supported": false
+    },
+    {
+      "trial": 80,
+      "id": "SYN-080",
+      "category": "third_party",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.221995,
+      "predicted_supported": false
+    },
+    {
+      "trial": 81,
+      "id": "SYN-081",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.675055,
+      "predicted_supported": false
+    },
+    {
+      "trial": 82,
+      "id": "SYN-082",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.200088,
+      "predicted_supported": false
+    },
+    {
+      "trial": 83,
+      "id": "SYN-083",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.614512,
+      "predicted_supported": false
+    },
+    {
+      "trial": 84,
+      "id": "SYN-084",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.980384,
+      "predicted_supported": false
+    },
+    {
+      "trial": 85,
+      "id": "SYN-085",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.536281,
+      "predicted_supported": false
+    },
+    {
+      "trial": 86,
+      "id": "SYN-086",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.730384,
+      "predicted_supported": false
+    },
+    {
+      "trial": 87,
+      "id": "SYN-087",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 2.014911,
+      "predicted_supported": false
+    },
+    {
+      "trial": 88,
+      "id": "SYN-088",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.291362,
+      "predicted_supported": false
+    },
+    {
+      "trial": 89,
+      "id": "SYN-089",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.65359,
+      "predicted_supported": false
+    },
+    {
+      "trial": 90,
+      "id": "SYN-090",
+      "category": "implementation",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.514926,
+      "predicted_supported": false
+    },
+    {
+      "trial": 91,
+      "id": "SYN-091",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.516228,
+      "predicted_supported": false
+    },
+    {
+      "trial": 92,
+      "id": "SYN-092",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.516228,
+      "predicted_supported": false
+    },
+    {
+      "trial": 93,
+      "id": "SYN-093",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.849342,
+      "predicted_supported": false
+    },
+    {
+      "trial": 94,
+      "id": "SYN-094",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.300641,
+      "predicted_supported": false
+    },
+    {
+      "trial": 95,
+      "id": "SYN-095",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.578798,
+      "predicted_supported": false
+    },
+    {
+      "trial": 96,
+      "id": "SYN-096",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.007456,
+      "predicted_supported": false
+    },
+    {
+      "trial": 97,
+      "id": "SYN-097",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.140513,
+      "predicted_supported": false
+    },
+    {
+      "trial": 98,
+      "id": "SYN-098",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 0.855384,
+      "predicted_supported": false
+    },
+    {
+      "trial": 99,
+      "id": "SYN-099",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.976663,
+      "predicted_supported": false
+    },
+    {
+      "trial": 100,
+      "id": "SYN-100",
+      "category": "evidence",
+      "expected_supported": false,
+      "retrieved": true,
+      "exact_source_match": false,
+      "top_score": 1.639995,
+      "predicted_supported": false
+    }
+  ],
+  "interpretation": "Deterministic retrieval benchmark only; not a generative model or production accuracy evaluation."
+}

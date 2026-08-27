@@ -1,0 +1,562 @@
+[
+  {
+    "id": "E-SYN-001",
+    "category": "governance",
+    "question_pattern": "Describe the ownership and executive oversight of your information security program.",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-002",
+    "category": "governance",
+    "question_pattern": "How often are enterprise security risks assessed and tracked to closure?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-003",
+    "category": "governance",
+    "question_pattern": "Who approves material changes to security policies and standards?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-004",
+    "category": "governance",
+    "question_pattern": "How are security responsibilities communicated to employees and contractors?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-005",
+    "category": "governance",
+    "question_pattern": "Do you maintain a documented security program scope for the service in question?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-006",
+    "category": "governance",
+    "question_pattern": "How are control exceptions recorded, approved, and reviewed?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-007",
+    "category": "governance",
+    "question_pattern": "What process governs changes to your security organization and key roles?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-008",
+    "category": "governance",
+    "question_pattern": "How do you report significant security metrics to executive leadership?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-009",
+    "category": "governance",
+    "question_pattern": "How are security policies reviewed, versioned, and approved?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-010",
+    "category": "governance",
+    "question_pattern": "What is the escalation path for unresolved security risks?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented governance control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-011",
+    "category": "access",
+    "question_pattern": "Is multi-factor authentication required for privileged administrative access?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-012",
+    "category": "access",
+    "question_pattern": "How are user accounts provisioned and removed when employment changes?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-013",
+    "category": "access",
+    "question_pattern": "Do you use role-based access control for production systems?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-014",
+    "category": "access",
+    "question_pattern": "How often are privileged access rights reviewed by an accountable owner?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-015",
+    "category": "access",
+    "question_pattern": "How are service accounts protected and monitored?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-016",
+    "category": "access",
+    "question_pattern": "Do you enforce single sign-on for enterprise customers?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-017",
+    "category": "access",
+    "question_pattern": "How do you restrict access to production data for support personnel?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-018",
+    "category": "access",
+    "question_pattern": "What controls prevent shared administrator credentials?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-019",
+    "category": "access",
+    "question_pattern": "How are authentication events logged and investigated?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-020",
+    "category": "access",
+    "question_pattern": "What is the process for emergency access to production systems?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented access control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-021",
+    "category": "data_protection",
+    "question_pattern": "How is customer data encrypted while transmitted over public networks?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-022",
+    "category": "data_protection",
+    "question_pattern": "How is customer data encrypted while stored?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-023",
+    "category": "data_protection",
+    "question_pattern": "What categories of customer data does the service process?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-024",
+    "category": "data_protection",
+    "question_pattern": "Where is customer data hosted and how is location controlled?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-025",
+    "category": "data_protection",
+    "question_pattern": "How are encryption keys generated, stored, rotated, and revoked?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-026",
+    "category": "data_protection",
+    "question_pattern": "What controls prevent unauthorized copying of customer data?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-027",
+    "category": "data_protection",
+    "question_pattern": "How do you separate customer data between tenants?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-028",
+    "category": "data_protection",
+    "question_pattern": "What retention periods apply to customer data and backups?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-029",
+    "category": "data_protection",
+    "question_pattern": "How do you process verified deletion requests?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-030",
+    "category": "data_protection",
+    "question_pattern": "How are removable media and exported datasets controlled?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented data protection control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-031",
+    "category": "privacy",
+    "question_pattern": "Do you maintain a documented privacy program for the service?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-032",
+    "category": "privacy",
+    "question_pattern": "How do you support data subject access and deletion requests?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-033",
+    "category": "privacy",
+    "question_pattern": "Which subprocessors may process personal data for the service?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-034",
+    "category": "privacy",
+    "question_pattern": "How do you assess privacy risks before launching a new feature?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-035",
+    "category": "privacy",
+    "question_pattern": "What contractual privacy terms are available to enterprise customers?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-036",
+    "category": "privacy",
+    "question_pattern": "How do you handle cross-border transfers of personal data?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-037",
+    "category": "privacy",
+    "question_pattern": "How are privacy incidents escalated and documented?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-038",
+    "category": "privacy",
+    "question_pattern": "How do you distinguish customer instructions from your own processing purposes?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-039",
+    "category": "privacy",
+    "question_pattern": "What controls govern employee access to personal data?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-040",
+    "category": "privacy",
+    "question_pattern": "How do you verify deletion from active systems and backups?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented privacy control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-041",
+    "category": "incident",
+    "question_pattern": "Do you maintain a documented incident response plan?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-042",
+    "category": "incident",
+    "question_pattern": "How are security events detected, triaged, and escalated?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-043",
+    "category": "incident",
+    "question_pattern": "What is your customer notification process for a material incident?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-044",
+    "category": "incident",
+    "question_pattern": "How often is the incident response plan tested?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-045",
+    "category": "incident",
+    "question_pattern": "How do you preserve evidence during a security investigation?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-046",
+    "category": "incident",
+    "question_pattern": "Who has authority to declare and close a security incident?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-047",
+    "category": "incident",
+    "question_pattern": "How are lessons learned tracked after an incident?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-048",
+    "category": "incident",
+    "question_pattern": "How do you coordinate incident communications with customers?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-049",
+    "category": "incident",
+    "question_pattern": "What severity levels and response targets do you use?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-050",
+    "category": "incident",
+    "question_pattern": "How are incidents involving subprocessors handled?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented incident control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-051",
+    "category": "continuity",
+    "question_pattern": "Do you maintain a business continuity plan for critical service operations?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-052",
+    "category": "continuity",
+    "question_pattern": "What recovery time objective applies to the service?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-053",
+    "category": "continuity",
+    "question_pattern": "What recovery point objective applies to customer data?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-054",
+    "category": "continuity",
+    "question_pattern": "How frequently are backups performed and tested?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-055",
+    "category": "continuity",
+    "question_pattern": "How often are disaster recovery procedures exercised?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-056",
+    "category": "continuity",
+    "question_pattern": "How do you maintain service availability during a regional outage?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-057",
+    "category": "continuity",
+    "question_pattern": "What dependencies are included in continuity planning?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-058",
+    "category": "continuity",
+    "question_pattern": "How are continuity test findings remediated?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-059",
+    "category": "continuity",
+    "question_pattern": "How do customers receive service availability and outage information?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-060",
+    "category": "continuity",
+    "question_pattern": "Who approves the continuity plan and its review cadence?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented continuity control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-061",
+    "category": "secure_development",
+    "question_pattern": "Do you maintain a documented secure software development lifecycle?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-062",
+    "category": "secure_development",
+    "question_pattern": "How are code changes reviewed before production deployment?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-063",
+    "category": "secure_development",
+    "question_pattern": "How do you scan dependencies for known vulnerabilities?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-064",
+    "category": "secure_development",
+    "question_pattern": "How are secrets prevented from entering source code repositories?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-065",
+    "category": "secure_development",
+    "question_pattern": "How do you prioritize and remediate application vulnerabilities?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-066",
+    "category": "secure_development",
+    "question_pattern": "Are security tests included in your build and release pipeline?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-067",
+    "category": "secure_development",
+    "question_pattern": "How do you control production releases and emergency changes?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-068",
+    "category": "secure_development",
+    "question_pattern": "How are developers trained on secure coding practices?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-069",
+    "category": "secure_development",
+    "question_pattern": "How do you assess the security of open-source components?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  },
+  {
+    "id": "E-SYN-070",
+    "category": "secure_development",
+    "question_pattern": "How are vulnerability exceptions approved and tracked?",
+    "approved_answer": "Synthetic Xelqara demo policy: the organization maintains a documented secure development control for the service. This statement is for benchmark evaluation only and requires customer evidence before use.",
+    "evidence_source": "xelqara_synthetic_answer_library.md",
+    "status": "approved_for_benchmark_only"
+  }
+]
