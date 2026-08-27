@@ -108,6 +108,17 @@ The report is written to `reports/rfp_100_eval.json`. The current benchmark meas
 
 Public third-party templates are recorded under `third_party/README.md`, but their files are not redistributed. Official or customer-owned questionnaires must be supplied with appropriate permission and kept outside the public repository.
 
+## Local review interface
+
+BidCore includes an optional local Flask interface for a human reviewer. It is bound to `127.0.0.1` by default and does not expose a public service or call an API.
+
+```bash
+python -m pip install -e '.[web]'
+bidcore-web --root .cortex --host 127.0.0.1 --port 7860
+```
+
+Open `http://127.0.0.1:7860` in the same environment. The interface supports local document ingestion and evidence-backed questions. It is a review interface, not an autonomous submission portal; enterprise deployments should add the customer's authentication, reverse proxy, backup, and network policies before exposing it beyond localhost.
+
 ## Local deployment packaging
 
 A minimal `Dockerfile` is included for customer-controlled deployment. It does not expose a public port, does not contain a model, and does not require an API key. Mount a customer-controlled `.cortex` directory when running the image and keep the container on the internal network. The deployment must still be configured with the customer's own access controls, backup policy, and review process.
