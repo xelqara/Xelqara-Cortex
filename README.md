@@ -49,6 +49,20 @@ UTF-8 documents → safe chunker → local SQLite context store
 
 The next planned layer is a provider-neutral local model interface. It will be optional, disabled by default, and restricted to approved local runtimes. Cortex will preserve evidence provenance and will not silently send private content to an external provider.
 
+## Xelqara BidCore specialization
+
+The first commercial specialization built on Cortex is **BidCore**: a private RFP, RFI, and security-questionnaire response engine for software and IT-service vendors. It retrieves approved evidence, drafts answers, attaches source identifiers, flags unsupported questions, and leaves every result in `pending_review` until a human approves it. It is designed to save proposal and security teams repetitive research and copy-paste work without inventing certifications, pricing, legal commitments, or security controls.
+
+Try the prototype with a local knowledge base and JSON questions:
+
+```bash
+cortex --root .cortex ingest examples/bidcore_knowledge.md --name bidcore_knowledge.md
+printf '["Do you encrypt customer data at rest?", "What is your disaster recovery RTO?"]' > questions.json
+bidcore --root .cortex --questions questions.json --output drafts.json
+```
+
+The same workflow is available in the free `colab_demo.ipynb`. BidCore is a drafting and evidence-review tool, not an autonomous submission system. The next adapters will add spreadsheet-aware question extraction and export while preserving human approval.
+
 ## Product direction
 
 The long-term product is **Cortex Private Intelligence Gateway**: an installable private cognitive layer for organizations that need memory, context, evidence, multilingual workflows, access controls, and auditable model behavior. Xelqara will differentiate through Arabic/English context engineering, local-first deployment, provenance, and verification rather than competing on parameter count.

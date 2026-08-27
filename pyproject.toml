@@ -15,6 +15,7 @@ dependencies = []
 
 [project.scripts]
 cortex = "xelqara_cortex.cli:main"
+bidcore = "xelqara_cortex.bid_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
