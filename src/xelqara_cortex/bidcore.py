@@ -85,7 +85,8 @@ class BidCore:
         excerpts = []
         for item in evidence[:3]:
             excerpt = re.sub(r"\s+", " ", item.text).strip()[:600]
-            excerpts.append(f"[{item.source}] {excerpt}")
+            location = f" @ {item.location}" if item.location else ""
+            excerpts.append(f"[{item.source}{location}] {excerpt}")
         confidence = "high" if len(evidence) >= 2 and evidence[0].score >= 0.5 else "medium"
         return ("مسودة مبنية على مصادر المؤسسة، وتحتاج مراجعة واعتماداً بشرياً:\n" + "\n".join(excerpts), confidence, "Human approval required before submission.")
 
@@ -93,7 +94,7 @@ class BidCore:
         evidence = self.cortex.search(question.question, evidence_limit)
         text, confidence, warning = self._draft(question.question, evidence)
         if self.model is not None and evidence and not any(item.warning for item in evidence):
-            context = "\n\n".join(f"SOURCE={item.source}\n{item.text[:1200]}" for item in evidence)
+            context = "\n\n".join(f"SOURCE={item.source} LOCATION={item.location or 'unspecified'}\n{item.text[:1200]}" for item in evidence)
             system = "You draft a factual enterprise RFP answer. Use only the supplied evidence. If evidence is insufficient, say so. Never invent certifications, pricing, legal commitments, or security controls. Return a concise answer for human review."
             prompt = f"Question: {question.question}\nCategory: {question.category}\nEvidence:\n{context}"
             try:
