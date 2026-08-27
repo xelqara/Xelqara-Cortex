@@ -61,7 +61,28 @@ printf '["Do you encrypt customer data at rest?", "What is your disaster recover
 bidcore --root .cortex --questions questions.json --output drafts.json
 ```
 
-The same workflow is available in the free `colab_demo.ipynb`. BidCore is a drafting and evidence-review tool, not an autonomous submission system. The next adapters will add spreadsheet-aware question extraction and export while preserving human approval.
+The same workflow is available in the free `colab_demo.ipynb`. BidCore is a drafting and evidence-review tool, not an autonomous submission system. The enterprise CLI adds workspaces, projects, roles, review transitions, audit events, and CSV export.
+
+## Local model mode without API keys
+
+The deterministic evidence mode works without any model. When a local runtime is available, BidCore can optionally use a loopback-only Ollama server or an explicitly configured local executable:
+
+```bash
+bidcore --root .cortex --questions questions.json --output drafts.json --ollama-model <local-model-name>
+# or
+bidcore --root .cortex --questions questions.json --output drafts.json --local-command /path/to/local-model-cli
+```
+
+The adapter never accepts a remote endpoint, and model-generated drafts remain `pending_review`. The evidence policy still forbids invented certifications, pricing, legal commitments, and security controls.
+
+Enterprise workflow example:
+
+```bash
+bidcore-enterprise --root .cortex workspace "Demo Bid Team" --owner owner
+bidcore-enterprise --root .cortex project <workspace-id> "Security RFP" --customer "Demo Customer" --by owner
+bidcore-enterprise --root .cortex draft <project-id> questions.json --by owner
+bidcore-enterprise --root .cortex export <project-id> reviewed_answers.csv
+```
 
 ## Product direction
 

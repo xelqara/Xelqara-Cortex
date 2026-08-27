@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .core import Cortex, Evidence
+from .local_model import LocalModel
 
 _CATEGORIES = {
     "security": re.compile(r"(?i)(security|encrypt|encryption|mfa|sso|identity|access|incident|breach|soc\s*2|iso\s*27001|التشفير|الأمن|الوصول|الحادثة)"),
@@ -34,8 +35,9 @@ class BidDraft:
     warning: str | None = None
 
 class BidCore:
-    def __init__(self, cortex: Cortex) -> None:
+    def __init__(self, cortex: Cortex, model: LocalModel | None = None) -> None:
         self.cortex = cortex
+        self.model = model
 
     @staticmethod
     def classify(question: str) -> str:
@@ -70,6 +72,18 @@ class BidCore:
     def draft(self, question: BidQuestion, evidence_limit: int = 3) -> BidDraft:
         evidence = self.cortex.search(question.question, evidence_limit)
         text, confidence, warning = self._draft(question.question, evidence)
+        if self.model is not None and evidence and not any(item.warning for item in evidence):
+            context = "\n\n".join(f"SOURCE={item.source}\n{item.text[:1200]}" for item in evidence)
+            system = "You draft a factual enterprise RFP answer. Use only the supplied evidence. If evidence is insufficient, say so. Never invent certifications, pricing, legal commitments, or security controls. Return a concise answer for human review."
+            prompt = f"Question: {question.question}\nCategory: {question.category}\nEvidence:\n{context}"
+            try:
+                response = self.model.generate(prompt, system)
+                if response.text.strip():
+                    text = "مسودة النموذج المحلي المبنية على الأدلة التالية، وتحتاج مراجعة واعتماداً بشرياً:\n" + response.text.strip()
+                    confidence = "medium"
+                    warning = "Local-model draft; verify every claim against cited sources before submission."
+            except Exception as exc:
+                warning = f"Local model unavailable; deterministic evidence draft retained: {exc}"
         return BidDraft(question.question_id, question.question, question.category, text, [item.source for item in evidence], confidence, "pending_review", warning)
 
     def draft_batch(self, questions: Iterable[BidQuestion], evidence_limit: int = 3) -> list[BidDraft]:
