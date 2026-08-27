@@ -24,6 +24,19 @@ class LocalModel:
     def generate(self, prompt: str, system: str = "") -> ModelResponse:
         raise NotImplementedError
 
+    def generate_structured(self, prompt: str, system: str = "") -> dict:
+        response = self.generate(prompt, system)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = text.strip("`").replace("json", "", 1).strip()
+        try:
+            value = json.loads(text)
+        except json.JSONDecodeError as exc:
+            raise LocalModelError("local model did not return valid JSON") from exc
+        if not isinstance(value, dict):
+            raise LocalModelError("local model JSON response must be an object")
+        return value
+
 class OllamaAdapter(LocalModel):
     def __init__(self, model: str, endpoint: str = "http://127.0.0.1:11434/api/generate") -> None:
         if not endpoint.startswith("http://127.0.0.1") and not endpoint.startswith("http://localhost"):
