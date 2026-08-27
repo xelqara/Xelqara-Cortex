@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xelqara-cortex"
+version = "0.1.0"
+description = "Local-first cognitive context and evidence engine by Xelqara AI"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Xelqara AI"}]
+license = {file = "LICENSE"}
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
+dependencies = []
+
+[project.scripts]
+cortex = "xelqara_cortex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
