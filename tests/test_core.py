@@ -1,6 +1,5 @@
 import tempfile
 import unittest
-from pathlib import Path
 
 from xelqara_cortex import Cortex
 
@@ -37,7 +36,25 @@ class CortexTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             cortex = Cortex(tmp)
             with self.assertRaises(ValueError):
-                cortex.ingest_text(str(Path(tmp) / "bad"), "data")
+                cortex.ingest_text("/absolute/bad", "data")
+            cortex.close()
+
+    def test_memory_round_trip(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            cortex = Cortex(tmp)
+            memory_id = cortex.remember("يفضل المستخدم إجابات عربية مختصرة.", "preference")
+            memories = cortex.list_memories("preference")
+            self.assertEqual(memories[0]["id"], memory_id)
+            self.assertIn("إجابات عربية", memories[0]["content"])
+            cortex.close()
+
+    def test_phrase_bonus_prefers_exact_context(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            cortex = Cortex(tmp)
+            cortex.ingest_text("a.md", "local privacy policy")
+            cortex.ingest_text("b.md", "privacy is important for every organization")
+            results = cortex.search("local privacy policy")
+            self.assertEqual(results[0].source, "a.md")
             cortex.close()
 
 

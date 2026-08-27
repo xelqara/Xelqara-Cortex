@@ -22,6 +22,12 @@ def build_parser() -> argparse.ArgumentParser:
     search = sub.add_parser("search", help="search local evidence")
     search.add_argument("query")
     search.add_argument("--limit", type=int, default=5)
+    remember = sub.add_parser("remember", help="store a durable local memory")
+    remember.add_argument("content")
+    remember.add_argument("--kind", default="general")
+    memories = sub.add_parser("memories", help="list durable local memories")
+    memories.add_argument("--kind")
+    memories.add_argument("--limit", type=int, default=20)
     return parser
 
 
@@ -36,6 +42,11 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps([item.__dict__ for item in cortex.search(args.query, args.limit)], ensure_ascii=False, indent=2))
         elif args.command == "ask":
             print(json.dumps(cortex.export_answer(cortex.answer_offline(args.question, args.limit)), ensure_ascii=False, indent=2))
+        elif args.command == "remember":
+            memory_id = cortex.remember(args.content, args.kind)
+            print(json.dumps({"status": "ok", "memory_id": memory_id, "kind": args.kind}, ensure_ascii=False))
+        elif args.command == "memories":
+            print(json.dumps(cortex.list_memories(args.kind, args.limit), ensure_ascii=False, indent=2))
         return 0
     except (OSError, ValueError) as exc:
         print(json.dumps({"status": "error", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
