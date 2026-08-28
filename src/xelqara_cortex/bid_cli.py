@@ -14,6 +14,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--root", default=".cortex")
     parser.add_argument("--questions", required=True, help="JSON list of question strings")
     parser.add_argument("--output", default="bidcore_drafts.json")
+    parser.add_argument("--coverage-report", help="optional JSON path for conservative pre-flight coverage analysis")
     parser.add_argument("--limit", type=int, default=3)
     parser.add_argument("--ollama-model", help="optional local Ollama model name; loopback only")
     parser.add_argument("--local-command", help="optional local executable that reads the prompt from stdin")
@@ -32,9 +33,17 @@ def main(argv: list[str] | None = None) -> int:
             model = LocalCommandAdapter(args.local_command)
         bid = BidCore(cortex, model=model)
         questions = bid.parse_questions(rows)
+        if args.coverage_report:
+            coverage = bid.coverage_report(questions, args.limit)
+            coverage_path = Path(args.coverage_report)
+            coverage_path.parent.mkdir(parents=True, exist_ok=True)
+            coverage_path.write_text(json.dumps(coverage, ensure_ascii=False, indent=2), encoding="utf-8")
         drafts = bid.draft_batch(questions, args.limit)
         bid.export_json(drafts, args.output)
-        print(json.dumps({"status": "ok", "questions": len(drafts), "output": str(Path(args.output).resolve())}, ensure_ascii=False))
+        result = {"status": "ok", "questions": len(drafts), "output": str(Path(args.output).resolve())}
+        if args.coverage_report:
+            result["coverage_report"] = str(Path(args.coverage_report).resolve())
+        print(json.dumps(result, ensure_ascii=False))
         return 0
     finally:
         cortex.close()
