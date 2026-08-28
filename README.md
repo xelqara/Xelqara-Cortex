@@ -137,17 +137,21 @@ python -m pip install -e '.[web]'
 bidcore-web --root .cortex --host 127.0.0.1 --port 7860
 ```
 
-For controlled integrations, the interface exposes two read-only-style JSON workflows that do not require an API key:
+For controlled integrations, the interface exposes local JSON workflows that do not require an API key:
 
 ```bash
 curl http://127.0.0.1:7860/api/stats
+curl http://127.0.0.1:7860/api/sources
 curl 'http://127.0.0.1:7860/api/search?q=encrypt&limit=5'
 curl -X POST http://127.0.0.1:7860/api/draft \\
   -H 'Content-Type: application/json' \\
   -d '{"question":"Do you encrypt customer data at rest?"}'
+curl -X POST http://127.0.0.1:7860/api/coverage \\
+  -H 'Content-Type: application/json' \\
+  -d '{"questions":[{"id":"SEC-1","question":"Do you encrypt customer data at rest?"},{"id":"BCP-1","question":"What is your disaster recovery RTO?"}]}'
 ```
 
-The JSON draft response includes the category, evidence-backed draft, source names, confidence, warning, and mandatory review state. The `/api/draft` endpoint is intended for a customer-controlled internal workflow; it does not submit proposals or make autonomous commitments.
+The JSON draft response includes the category, evidence-backed draft, source names, confidence, warning, and mandatory review state. `/api/sources` returns source-level chunk and location inventory. `/api/coverage` performs a conservative pre-flight analysis and reports supported questions, gaps, category counts, and a recommendation to review gaps before commitment. These endpoints are intended for a customer-controlled internal workflow; they do not submit proposals or make autonomous commitments.
 
 ## Product direction
 
