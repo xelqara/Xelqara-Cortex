@@ -23,6 +23,7 @@ bidcore = "xelqara_cortex.bid_cli:main"
 bidcore-enterprise = "xelqara_cortex.enterprise_cli:main"
 bidcore-web = "xelqara_cortex.web_app:main"
 bidcore-fill-xlsx = "xelqara_cortex.xlsx_response:main"
+bidcore-fill-docx = "xelqara_cortex.docx_response:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -105,6 +105,14 @@ bidcore-fill-xlsx questionnaire.xlsx answered_questionnaire.xlsx --root .cortex
 
 The writer is intentionally conservative: it supports recognizable question headers and keeps workbook sheets, row order, and existing cells, but it is not yet a universal portal automation system. Always inspect the generated copy before sending it to a customer.
 
+For DOCX questionnaires, BidCore can insert a reviewable response paragraph after an exact matching question paragraph in a **new copy**. The original package is never overwritten:
+
+```bash
+bidcore-fill-docx questionnaire.docx answered_questionnaire.docx --root .cortex
+```
+
+DOCX output preserves the source package and document content, but inserted response paragraphs use the standard Word paragraph structure. A human must inspect the result before delivery.
+
 ## RFP benchmark and prompt pack
 
 The repository includes an original, synthetic benchmark of 100 RFP and security-questionnaire prompts across ten operational domains. It is explicitly marked synthetic and is not customer data. Run it with:
