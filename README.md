@@ -82,6 +82,7 @@ bidcore-enterprise --root .cortex workspace "Demo Bid Team" --owner owner
 bidcore-enterprise --root .cortex project <workspace-id> "Security RFP" --customer "Demo Customer" --by owner
 bidcore-enterprise --root .cortex draft <project-id> questions.json --by owner
 bidcore-enterprise --root .cortex export <project-id> reviewed_answers.csv
+bidcore-enterprise --root .cortex trust-pack <project-id> trust_pack.json
 ```
 
 ## Document formats and evidence governance
@@ -168,7 +169,7 @@ curl -X POST http://127.0.0.1:7860/api/coverage \\
   -d '{"questions":[{"id":"SEC-1","question":"Do you encrypt customer data at rest?"},{"id":"BCP-1","question":"What is your disaster recovery RTO?"}]}'
 ```
 
-The JSON draft response includes the category, evidence-backed draft, source names, confidence, warning, and mandatory review state. `/api/sources` returns source-level chunk and location inventory. `/api/coverage` performs a conservative pre-flight analysis and reports supported questions, gaps, category counts, and a recommendation to review gaps before commitment. These endpoints are intended for a customer-controlled internal workflow; they do not submit proposals or make autonomous commitments.
+The JSON draft response includes the category, evidence-backed draft, source names, confidence, warning, and mandatory review state. `/api/sources` returns source-level chunk and location inventory. `/api/coverage` performs a conservative pre-flight analysis and reports supported questions, gaps, category counts, and a recommendation to review gaps before commitment. The enterprise CLI also provides `trust-pack`, which exports only approved review items together with source inventory and audit provenance. These endpoints are intended for a customer-controlled internal workflow; they do not submit proposals or make autonomous commitments.
 
 ## Product direction
 

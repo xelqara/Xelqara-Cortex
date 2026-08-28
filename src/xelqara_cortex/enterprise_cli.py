@@ -9,6 +9,7 @@ from .bidcore import BidCore
 from .core import Cortex
 from .document_io import DocumentImporter
 from .enterprise import EnterpriseStore
+from .trust_pack import build_trust_pack
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -43,6 +44,9 @@ def main(argv: list[str] | None = None) -> int:
     export.add_argument("output")
     audit = sub.add_parser("audit")
     audit.add_argument("--target")
+    trust = sub.add_parser("trust-pack")
+    trust.add_argument("project_id")
+    trust.add_argument("output")
     args = parser.parse_args(argv)
     cortex = Cortex(args.root)
     store = EnterpriseStore(args.root)
@@ -76,6 +80,8 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps({"status": "ok", "output": str(Path(args.output).resolve())}, ensure_ascii=False))
         elif args.command == "audit":
             print(json.dumps(store.audit_log(args.target), ensure_ascii=False, indent=2))
+        elif args.command == "trust-pack":
+            print(json.dumps(build_trust_pack(cortex, store, args.project_id, args.output), ensure_ascii=False, indent=2))
         return 0
     finally:
         store.close()
