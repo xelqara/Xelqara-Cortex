@@ -67,12 +67,19 @@ class BidCore:
         return questions
 
     @classmethod
-    def parse_questions(cls, rows: Iterable[str]) -> list[BidQuestion]:
+    def parse_questions(cls, rows: Iterable[object]) -> list[BidQuestion]:
         questions: list[BidQuestion] = []
         for index, row in enumerate(rows, 1):
-            text = str(row).strip()
+            question_id = f"Q{index:04d}"
+            if isinstance(row, dict):
+                raw_id = row.get("question_id") or row.get("id")
+                raw_text = row.get("question") or row.get("text") or row.get("question_text")
+                question_id = str(raw_id).strip() if raw_id else question_id
+                text = str(raw_text or "").strip()
+            else:
+                text = str(row).strip()
             if text:
-                questions.append(BidQuestion(f"Q{index:04d}", text, cls.classify(text)))
+                questions.append(BidQuestion(question_id, text, cls.classify(text)))
         return questions
 
     @staticmethod
@@ -109,6 +116,44 @@ class BidCore:
 
     def draft_batch(self, questions: Iterable[BidQuestion], evidence_limit: int = 3) -> list[BidDraft]:
         return [self.draft(question, evidence_limit) for question in questions]
+
+    def coverage_report(self, questions: Iterable[BidQuestion], evidence_limit: int = 3) -> dict:
+        """Return a deterministic pre-flight report before a team commits to an RFP."""
+        questions = list(questions)
+        drafts = self.draft_batch(questions, evidence_limit)
+        total = len(drafts)
+        # Coverage is intentionally conservative: a weak lexical overlap is not
+        # enough to call a question supported. This is a pre-flight heuristic,
+        # not a claim of semantic truth.
+        evidence_by_question = {
+            question.question_id: self.cortex.search(question.question, evidence_limit)
+            for question in questions
+        }
+        def is_supported(item: BidDraft) -> bool:
+            evidence = evidence_by_question.get(item.question_id, [])
+            return bool(evidence) and evidence[0].score >= 0.75 and not any(source.warning for source in evidence)
+        supported = sum(is_supported(item) for item in drafts)
+        gaps = total - supported
+        warnings = sum(bool(item.warning) for item in drafts)
+        by_category: dict[str, dict[str, int]] = {}
+        for item in drafts:
+            bucket = by_category.setdefault(item.category, {"total": 0, "supported": 0, "gaps": 0})
+            bucket["total"] += 1
+            if is_supported(item):
+                bucket["supported"] += 1
+            else:
+                bucket["gaps"] += 1
+        ratio = round(supported / total, 4) if total else 0.0
+        return {
+            "total_questions": total,
+            "supported_questions": supported,
+            "gap_questions": gaps,
+            "warning_questions": warnings,
+            "coverage_ratio": ratio,
+            "recommendation": "proceed_to_review" if total and ratio >= 0.75 else "review_gaps_before_commitment",
+            "by_category": by_category,
+            "drafts": [asdict(item) for item in drafts],
+        }
 
     @staticmethod
     def export_json(drafts: Iterable[BidDraft], path: str | Path) -> None:

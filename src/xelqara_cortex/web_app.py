@@ -24,6 +24,7 @@ _PAGE = """<!doctype html>
 <div class="grid" style="margin-top:16px"><section class="panel span-5"><div class="eyebrow">01 · Evidence base</div><h2>Import approved company knowledge</h2><p class="muted small">Supported: TXT, Markdown, CSV, TSV, XLSX, DOCX, and text PDF. Files remain in this local environment and are never sent to an external provider.</p><form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data"><input type="file" name="document" accept=".txt,.md,.csv,.tsv,.xlsx,.docx,.pdf" required><button>Import evidence</button></form></section>
 <section class="panel span-7"><div class="eyebrow">02 · Review workflow</div><h2>Ask one RFP or security question</h2><p class="muted small">BidCore retrieves relevant evidence, drafts a conservative answer, cites sources, and keeps the result in <b>pending_review</b>.</p><form method="post" action="{{ url_for('ask') }}"><textarea name="question" rows="4" placeholder="Do you encrypt customer data at rest?\nهل يتم تشفير بيانات العملاء أثناء التخزين؟" required></textarea><button>Generate evidence draft</button></form></section></div>
 {% if draft %}<section class="panel span-12" style="margin-top:16px"><div class="eyebrow">Review output</div><h2>Draft answer</h2><p><span class="badge">{{ draft.category }}</span><span class="badge">Confidence: {{ draft.confidence }}</span><span class="badge">{{ draft.review }}</span></p>{% if draft.warning %}<div class="alert">{{ draft.warning }}</div>{% endif %}<div class="result">{{ draft.draft }}</div><p class="muted small">Sources: {% for source in draft.sources %}<span class="badge">{{ source }}</span>{% else %}none{% endfor %}</p></section>{% endif %}
+<section class="panel span-12" style="margin-top:16px"><div class="eyebrow">03 · Pre-flight coverage</div><h2>Check coverage before committing to an RFP</h2><p class="muted small">Paste one question per line. A weak keyword overlap is not treated as reliable support; the report is a conservative preparation heuristic.</p><form method="post" action="{{ url_for('coverage') }}"><textarea name="questions" rows="5" placeholder="Do you encrypt customer data at rest?\nWhat is your disaster recovery RTO?\nDescribe your incident response process."></textarea><button class="secondary">Analyze coverage</button></form>{% if report %}<p><span class="badge">{{ report.total_questions }} questions</span><span class="badge">{{ report.supported_questions }} supported</span><span class="badge">{{ report.gap_questions }} gaps</span><span class="badge">Recommendation: {{ report.recommendation }}</span></p>{% for category, values in report.by_category.items() %}<span class="badge">{{ category }} · {{ values.supported }}/{{ values.total }}</span>{% endfor %}{% endif %}</section>
 <section class="panel span-12" style="margin-top:16px"><div class="eyebrow">Operating boundary</div><h2>Designed for accountable enterprise review</h2><p class="muted small">Document text is treated as untrusted data. Unsupported questions remain low-confidence. BidCore does not invent certifications, pricing, legal commitments, or security controls. Do not expose this development interface beyond localhost without customer authentication, TLS, backups, and a deployment security review.</p></section>
 <div class="footer muted">Xelqara BidCore is a drafting and evidence-review system, not an autonomous submission service or a certification.</div>
 </body></html>"""
@@ -36,6 +37,7 @@ def _stats(cortex: Cortex) -> tuple[int, int]:
 
 def _render(cortex: Cortex, **kwargs):
     count, sources = _stats(cortex)
+    kwargs.setdefault("report", None)
     return render_template_string(_PAGE, count=count, sources=sources, **kwargs)
 
 
@@ -82,6 +84,18 @@ def create_app(root: str = ".cortex") -> Flask:
         item = BidCore(cortex).draft(BidCore.parse_questions([question])[0], _safe_limit(payload.get("evidence_limit"), 3, 5))
         return jsonify({"question_id": item.question_id, "question": item.question, "category": item.category, "draft": item.draft, "sources": item.sources, "confidence": item.confidence, "review": item.review, "warning": item.warning})
 
+    @app.post("/api/coverage")
+    def api_coverage():
+        payload = request.get_json(silent=True) or {}
+        rows = payload.get("questions")
+        if not isinstance(rows, list) or not rows or len(rows) > 500:
+            return jsonify({"error": "questions must be a non-empty JSON list with at most 500 items"}), 400
+        questions = BidCore.parse_questions(rows)
+        if not questions:
+            return jsonify({"error": "questions list contains no usable text"}), 400
+        report = BidCore(cortex).coverage_report(questions, _safe_limit(payload.get("evidence_limit"), 3, 5))
+        return jsonify(report)
+
     @app.get("/")
     def home():
         return _render(cortex, draft=None, message=None)
@@ -114,6 +128,17 @@ def create_app(root: str = ".cortex") -> Flask:
             return _render(cortex, draft=None, message=f"Imported {chunks} evidence chunks from {candidate.name}.")
         except Exception as exc:
             return _render(cortex, draft=None, message=f"Import failed: {exc}"), 400
+
+    @app.post("/coverage")
+    def coverage():
+        raw_questions = request.form.get("questions", "")
+        rows = [line.strip() for line in raw_questions.splitlines() if line.strip()]
+        if not rows:
+            return _render(cortex, draft=None, report=None, message="Add at least one question for coverage analysis."), 400
+        if len(rows) > 500:
+            return _render(cortex, draft=None, report=None, message="Coverage analysis is limited to 500 questions."), 400
+        report = BidCore(cortex).coverage_report(BidCore.parse_questions(rows))
+        return _render(cortex, draft=None, report=report, message=None)
 
     @app.post("/ask")
     def ask():

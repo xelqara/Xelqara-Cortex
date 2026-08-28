@@ -36,6 +36,14 @@ class WebAppTests(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(response.json["review"], "pending_review")
             self.assertIn("sources", response.json)
+            response = client.post("/api/coverage", json={"questions": [
+                {"id": "SEC-1", "question": "Is customer data encrypted at rest?"},
+                {"id": "BCP-1", "question": "What is your disaster recovery RTO?"},
+            ]})
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json["total_questions"], 2)
+            self.assertEqual(response.json["gap_questions"], 1)
+            self.assertEqual(response.json["recommendation"], "review_gaps_before_commitment")
             response = client.post("/ask", data={"question": "Is customer data encrypted at rest?"})
             self.assertEqual(response.status_code, 200)
             self.assertIn("Confidence", response.get_data(as_text=True))

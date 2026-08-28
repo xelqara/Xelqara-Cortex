@@ -21,6 +21,26 @@ class BidCoreTests(unittest.TestCase):
             self.assertIn("customer data", draft.draft)
             cortex.close()
 
+    def test_structured_question_rows_keep_ids(self):
+        rows = [{"id": "SEC-7", "question": "Is MFA required for administrators?"}]
+        parsed = BidCore.parse_questions(rows)
+        self.assertEqual(parsed[0].question_id, "SEC-7")
+        self.assertEqual(parsed[0].category, "security")
+
+    def test_coverage_report_surfaces_gaps_before_commitment(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            cortex = Cortex(tmp)
+            cortex.ingest_text("security.md", "Customer data is encrypted at rest and MFA protects admin access.")
+            report = BidCore(cortex).coverage_report(BidCore.parse_questions([
+                "Is customer data encrypted at rest?",
+                "What is your disaster recovery RTO?",
+            ]))
+            self.assertEqual(report["total_questions"], 2)
+            self.assertEqual(report["supported_questions"], 1)
+            self.assertEqual(report["gap_questions"], 1)
+            self.assertEqual(report["recommendation"], "review_gaps_before_commitment")
+            cortex.close()
+
     def test_unsupported_question_is_not_guessed(self):
         with tempfile.TemporaryDirectory() as tmp:
             cortex = Cortex(tmp)
