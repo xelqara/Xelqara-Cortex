@@ -5,7 +5,7 @@ import html
 import json
 import secrets
 from pathlib import Path
-from flask import Flask, request, redirect, url_for, render_template_string
+from flask import Flask, request, redirect, url_for, render_template_string, jsonify
 
 from .core import Cortex
 from .bidcore import BidCore
@@ -35,6 +35,18 @@ def create_app(root: str = ".cortex") -> Flask:
     app = Flask(__name__)
     app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
     cortex = Cortex(root_path)
+
+    @app.get("/health")
+    def health():
+        return jsonify({"status": "ok", "service": "xelqara-bidcore", "mode": "local-first"})
+
+    @app.get("/api/search")
+    def api_search():
+        query = request.args.get("q", "").strip()
+        if not query:
+            return jsonify({"error": "q is required"}), 400
+        results = cortex.search(query, limit=min(int(request.args.get("limit", 5)), 20))
+        return jsonify({"query": query, "results": [{"source": item.source, "location": item.location, "score": item.score, "text": item.text} for item in results]})
 
     @app.get("/")
     def home():
