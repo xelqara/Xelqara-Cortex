@@ -1,6 +1,8 @@
 import io
+import os
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 try:
@@ -10,6 +12,18 @@ except ImportError:
 
 
 class WebAppTests(unittest.TestCase):
+    def test_optional_authentication_and_security_headers(self):
+        if create_app is None:
+            self.skipTest("Flask is not installed")
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {"BIDCORE_AUTH_TOKEN": "test-secret"}, clear=False):
+            app = create_app(tmp)
+            client = app.test_client()
+            self.assertEqual(client.get("/health").status_code, 401)
+            response = client.get("/health", headers={"Authorization": "Bearer test-secret"})
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.headers["X-Frame-Options"], "DENY")
+            self.assertEqual(response.headers["X-Content-Type-Options"], "nosniff")
+
     def test_home_and_question_flow(self):
         if create_app is None:
             self.skipTest("Flask is not installed")

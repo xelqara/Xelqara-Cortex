@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+import hmac
+import os
 import secrets
 from pathlib import Path
 
@@ -56,6 +58,27 @@ def create_app(root: str = ".cortex") -> Flask:
     app = Flask(__name__)
     app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
     cortex = Cortex(root_path)
+    auth_token = os.environ.get("BIDCORE_AUTH_TOKEN", "").strip()
+
+    @app.before_request
+    def require_optional_token():
+        if not auth_token:
+            return None
+        supplied = request.headers.get("Authorization", "")
+        if supplied.lower().startswith("bearer "):
+            supplied = supplied[7:].strip()
+        supplied = supplied or request.headers.get("X-BidCore-Token", "")
+        if not hmac.compare_digest(supplied, auth_token):
+            return jsonify({"error": "authentication required"}), 401
+        return None
+
+    @app.after_request
+    def security_headers(response):
+        response.headers.setdefault("X-Content-Type-Options", "nosniff")
+        response.headers.setdefault("X-Frame-Options", "DENY")
+        response.headers.setdefault("Referrer-Policy", "no-referrer")
+        response.headers.setdefault("Cache-Control", "no-store")
+        return response
 
     @app.get("/health")
     def health():
