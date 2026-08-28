@@ -128,6 +128,27 @@ docker build -t xelqara-bidcore:local .
 docker run --rm -v "$PWD/.cortex:/app/.cortex" xelqara-bidcore:local --help
 ```
 
+## Product-ready local review interface
+
+The local web interface is now a usable customer-demo surface rather than only a developer endpoint. It shows evidence and source counts, imports approved knowledge, drafts one question at a time, and clearly labels every output as `pending_review`. It remains loopback-only by default.
+
+```bash
+python -m pip install -e '.[web]'
+bidcore-web --root .cortex --host 127.0.0.1 --port 7860
+```
+
+For controlled integrations, the interface exposes two read-only-style JSON workflows that do not require an API key:
+
+```bash
+curl http://127.0.0.1:7860/api/stats
+curl 'http://127.0.0.1:7860/api/search?q=encrypt&limit=5'
+curl -X POST http://127.0.0.1:7860/api/draft \\
+  -H 'Content-Type: application/json' \\
+  -d '{"question":"Do you encrypt customer data at rest?"}'
+```
+
+The JSON draft response includes the category, evidence-backed draft, source names, confidence, warning, and mandatory review state. The `/api/draft` endpoint is intended for a customer-controlled internal workflow; it does not submit proposals or make autonomous commitments.
+
 ## Product direction
 
 The long-term product is **Cortex Private Intelligence Gateway**: an installable private cognitive layer for organizations that need memory, context, evidence, multilingual workflows, access controls, and auditable model behavior. Xelqara will differentiate through Arabic/English context engineering, local-first deployment, provenance, and verification rather than competing on parameter count.
