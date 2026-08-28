@@ -1,3 +1,4 @@
+import io
 import tempfile
 import unittest
 from pathlib import Path
@@ -21,6 +22,8 @@ class WebAppTests(unittest.TestCase):
             source = Path(tmp) / "knowledge.md"
             source.write_text("Customer data is encrypted at rest.", encoding="utf-8")
             response = client.post("/ingest", data={"path": str(source)})
+            self.assertEqual(response.status_code, 200)
+            response = client.post("/upload", data={"document": (io.BytesIO(b"MFA is required for admin access."), "security.md")}, content_type="multipart/form-data")
             self.assertEqual(response.status_code, 200)
             response = client.get("/api/search?q=encrypted")
             self.assertEqual(response.status_code, 200)
