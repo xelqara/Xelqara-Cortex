@@ -67,6 +67,10 @@ def create_app(root: str = ".cortex") -> Flask:
         count, sources = _stats(cortex)
         return jsonify({"evidence_chunks": count, "source_documents": sources, "review_policy": "human_approval_required"})
 
+    @app.get("/api/sources")
+    def api_sources():
+        return jsonify({"sources": cortex.source_inventory()})
+
     @app.get("/api/search")
     def api_search():
         query = request.args.get("q", "").strip()

@@ -143,6 +143,16 @@ class Cortex:
         rows = self.db.execute(query, (*args, max(1, min(limit, 100)))).fetchall()
         return [{"id": r[0], "kind": r[1], "content": r[2], "created_at": r[3]} for r in rows]
 
+    def source_inventory(self) -> list[dict[str, object]]:
+        """Return deterministic source-level health facts from the local store."""
+        rows = self.db.execute(
+            "SELECT source, COUNT(*), SUM(LENGTH(text)), MAX(CASE WHEN metadata IS NOT NULL AND metadata != '' THEN 1 ELSE 0 END) FROM chunks GROUP BY source ORDER BY source"
+        ).fetchall()
+        return [
+            {"source": row[0], "chunks": int(row[1]), "characters": int(row[2] or 0), "has_locations": bool(row[3])}
+            for row in rows
+        ]
+
     def search(self, query: str, limit: int = 5) -> list[Evidence]:
         if not query.strip():
             return []
