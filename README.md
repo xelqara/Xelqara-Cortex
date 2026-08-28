@@ -96,6 +96,15 @@ cortex --root .cortex ingest customer_questionnaire.xlsx --name customer_questio
 
 The resulting evidence records expose locations such as `sheet:Questionnaire/row:12`, `paragraph:8`, or `page:4`, allowing reviewers to return to the original file.
 
+For XLSX questionnaires, BidCore can fill a **new copy** while preserving the source workbook. It detects a question column, writes the evidence-backed draft into the response column, and adds source, confidence, and review columns. It refuses to overwrite the source file and leaves every row in `pending_review` until a human approves it:
+
+```bash
+python -m pip install -e '.[spreadsheets]'
+bidcore-fill-xlsx questionnaire.xlsx answered_questionnaire.xlsx --root .cortex
+```
+
+The writer is intentionally conservative: it supports recognizable question headers and keeps workbook sheets, row order, and existing cells, but it is not yet a universal portal automation system. Always inspect the generated copy before sending it to a customer.
+
 ## RFP benchmark and prompt pack
 
 The repository includes an original, synthetic benchmark of 100 RFP and security-questionnaire prompts across ten operational domains. It is explicitly marked synthetic and is not customer data. Run it with:
