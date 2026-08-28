@@ -37,7 +37,10 @@ class Cortex:
     def __init__(self, root: str | Path = ".cortex") -> None:
         self.root = Path(root).expanduser().resolve()
         self.root.mkdir(parents=True, exist_ok=True)
-        self.db = sqlite3.connect(self.root / "cortex.db")
+        # Flask's local development server may serve requests on worker threads.
+        # The app remains loopback-only; allowing this connection across threads
+        # prevents a false 500 on read-only dashboard endpoints.
+        self.db = sqlite3.connect(self.root / "cortex.db", check_same_thread=False)
         self.db.execute("CREATE TABLE IF NOT EXISTS chunks (id TEXT PRIMARY KEY, source TEXT NOT NULL, text TEXT NOT NULL, tokens TEXT NOT NULL)")
         columns = {row[1] for row in self.db.execute("PRAGMA table_info(chunks)").fetchall()}
         if "location" not in columns:
